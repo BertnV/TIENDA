@@ -10,7 +10,7 @@ if(isset($_POST['enviar'])){
 
 $phpNombre = $_POST['inputNombre'];
 
-$insertFabricante = "INSERT INTO fabricante (nombre) VALUE('$phpNombre')"
+$insertFabricante = "INSERT INTO fabricante (nombre) VALUE('$phpNombre')";
 
 
 $resultado = mysqli_query($connection, $insertFabricante);

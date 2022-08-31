@@ -8,12 +8,35 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="style.css">
+
     <title>Productos!</title>
   </head>
-  <body>
+  <body class="sty">
+
 
   <div class="container"> 
+  <br>
 
+<!-- inicio de formulario  -->
+<form action = "action/insertproductos.php" method = "POST">
+  <div class="mb-3">
+    <label class="form-label">Nombre de Productos</label>
+    <input  type="text" name="inputNombre"  class="form-control">
+    <label class="form-label">Precio</label>
+    <input  type="text" name="inputPrecio"  class="form-control">
+    <label class="form-label">Codigo de fabricante </label>
+    <input  type="text" name="inputCodigoFabricante"  class="form-control">
+  </div>
+
+  
+  <button type="submit" name="enviar" 
+  class="btn btn-primary">Enviar</button>
+</form>
+<!-- fin de formulario  -->
+<br>
+
+<!-- comienso de tabla -->
   <table class="table table-dark table-striped">
   <thead>
     <tr>
@@ -45,6 +68,7 @@ while ($fila = mysqli_fetch_array($resultado)) {
     
     </tr>
         <?php } ?>
+        <!-- fin de tabla -->
   </tbody>
 </table>
   </div>

@@ -8,9 +8,12 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    
+    <link rel="stylesheet" href="style.css">
+
     <title>Fabricantes</title>
   </head>
-  <body>
+  <body class = "sty">
  
 <div class="container">
 <br>
@@ -21,7 +24,8 @@
     <label class="form-label">Nombre fabricante</label>
     <input  type="text" name="inputNombre"  class="form-control">
   </div>
-  <button type="submit" name="enviar" class="btn btn-primary">Enviar</button>
+  <button type="submit" name="enviar" 
+  class="btn btn">Enviar</button>
 </form>
 <!-- fin de formulario  -->
 <br>

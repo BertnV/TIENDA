@@ -1,0 +1,51 @@
+
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+ 
+ .sty{
+    background-color:#8B0000 ;
+}
+
+h1{
+    color:black;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+.fab{
+    font-family: sans-serif;
+    color: black;
+    text-shadow: 0in;
+}
+
+.nav-link{
+    font-weight: bold;
+    color: #000;
+}
+.form-label{
+    color: #000;
+    font-weight: bold;
+}
+.form-control{
+    background-color:#000;
+}
+
+.btn{
+    background-color: #000;
+    color: #fff;
+}
+
+.grid{
+    margin-top: 2rem;
+    display: grid;
+    column-gap: 1rem;
+    row-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    overflow: hidden;
+    padding: 5rem;
+}
