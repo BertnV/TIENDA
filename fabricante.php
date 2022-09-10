@@ -30,12 +30,14 @@
 <!-- fin de formulario  -->
 <br>
 
-<!-- inicio de la tabla  -->
+<!-- inicio de la tabla fabricante  -->
 <table class="table table-dark table-striped">
   <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">Nombre</th>
+      <th scope="col">Eliminar</th>
+      <th scope="col">Editar</th>
      
     </tr>
   </thead>
@@ -52,13 +54,12 @@ $consulta = "SELECT * FROM fabricante";
 $resultado = mysqli_query($connection, $consulta);
 // Mientras haya algo dentro de table, seguira listando
 while ($fila = mysqli_fetch_array($resultado)) {
-
-
-
   ?>
     <tr>
       <th scope="row"><?php echo $fila["codigo"]?></th>
       <td><?php echo $fila["nombre"]?></td>
+      <td><a button href="action/deletefabricante.php?id=<?php echo $fila["codigo"]?> " type="button" class="btn btn-danger" >Eliminar</a></td>
+      <td><a button type="button" class="btn btn-warning">Editar</a></td>
       
     </tr>
 <?php }  // cierre del while?>
