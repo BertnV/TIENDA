@@ -61,7 +61,7 @@
       <th scope="col">Fabricante</th>
       <th scope="col">Eliminar</th>
       <th scope="col">Editar</th>
-    </tr>
+        </tr>
   </thead>
   <tbody>
 
@@ -87,7 +87,7 @@ while ($fila = mysqli_fetch_array($resultado)) {
       <td><?php echo $fila["precio_producto"]?></td>
       <td><?php echo $fila["nombre_fabricante"]?></td>
       <td><a button href="action/deleteproducto.php?id=<?php echo $fila["codigo_producto"]?> " type="button" class="btn btn-danger" >Eliminar</a></td>
-      <td><a button type="button" class="btn btn-warning">Editar</a></td>
+      <td><a button href="action/editarproducto.php?id=<?php echo $fila["codigo_producto"]?> type="button" class="btn btn-warning">Editar</a></td>
       
     </tr>
 <?php }  // cierre del while

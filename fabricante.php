@@ -41,25 +41,22 @@
      
     </tr>
   </thead>
-
   <tbody>
-
   <?php
-
-// Importar el archivo de conexion
-  include('connection/connection.php');
-  // Variable para listar toda la tabla de fabricante
-$consulta = "SELECT * FROM fabricante";
-// Query de conexion y query de listado
-$resultado = mysqli_query($connection, $consulta);
-// Mientras haya algo dentro de table, seguira listando
-while ($fila = mysqli_fetch_array($resultado)) {
+      // Importar el archivo de conexion
+      include('connection/connection.php');
+      // Variable para listar toda la tabla de fabricante
+      $consulta = "SELECT * FROM fabricante";
+      // Query de conexion y query de listado
+      $resultado = mysqli_query($connection, $consulta);
+      // Mientras haya algo dentro de table, seguira listando
+      while ($fila = mysqli_fetch_array($resultado)) {
   ?>
     <tr>
       <th scope="row"><?php echo $fila["codigo"]?></th>
       <td><?php echo $fila["nombre"]?></td>
       <td><a button href="action/deletefabricante.php?id=<?php echo $fila["codigo"]?> " type="button" class="btn btn-danger" >Eliminar</a></td>
-      <td><a button type="button" class="btn btn-warning">Editar</a></td>
+      <td><a button  href="action/editarfabricante.php?id=<?php echo $fila["codigo"]?> type="button" class="btn btn-warning">Edit</a></td>
       
     </tr>
 <?php }  // cierre del while?>
