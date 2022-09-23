@@ -8,7 +8,7 @@
     $phpPassword = $_POST['inputPassword'];
 
     $consulta = "SELECT * FROM usuario WHERE email = '$phpEmail'";
-    // $consulta2 = "SELECT * FROM usuario WHERE passwor = '$phpPassword'";
+ 
  
     $resultado = mysqli_query($connection,$consulta);
 
